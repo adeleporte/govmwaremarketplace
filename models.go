@@ -20,8 +20,13 @@ type DataList struct {
 }
 
 type Product struct {
-	DisplayName string `json:"displayname"`
-	Slug        string `json:"slug"`
+	ProductID                  string                  `json:"productid"`
+	DisplayName                string                  `json:"displayname"`
+	Slug                       string                  `json:"slug"`
+	ProductDeploymentFilesList []ProductDeploymentFile `json:"productdeploymentfilesList"`
+	ProductLogo                ProductLogo             `json:"productlogo"`
+	Description                ProductDescription      `json:"description"`
+	SolutionType               string                  `json:"solutiontype"`
 }
 
 type GetProductDetailResponse struct {
