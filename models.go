@@ -27,6 +27,14 @@ type Product struct {
 	ProductLogo                ProductLogo             `json:"productlogo"`
 	Description                ProductDescription      `json:"description"`
 	SolutionType               string                  `json:"solutiontype"`
+	PublisherDetails           PublisherDetails        `json:"publisherdetails"`
+}
+
+type PublisherDetails struct {
+	UserID         string `json:"userid"`
+	OrgID          string `json:"orgid"`
+	OrgName        string `json:"orgname"`
+	OrgDisplayName string `json:"orgdisplayname"`
 }
 
 type GetProductDetailResponse struct {
@@ -45,6 +53,7 @@ type ProductDetail struct {
 	ProductLogo                ProductLogo             `json:"productlogo"`
 	Description                ProductDescription      `json:"description"`
 	SolutionType               string                  `json:"solutiontype"`
+	PublisherDetails           PublisherDetails        `json:"publisherdetails"`
 }
 
 type ProductDescription struct {
