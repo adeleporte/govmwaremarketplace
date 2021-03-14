@@ -55,7 +55,7 @@ func GetProducts(client MyClient) (GetProductsResponse, error) {
 
 	pl := GetProductsResponse{}
 
-	r, err := http.NewRequest("GET", "https://api.marketplace.cloud.vmware.com/products?pagination={\"page\":1,\"pageSize\":1000}", nil)
+	r, err := http.NewRequest("GET", "https://api.marketplace.cloud.vmware.com/products?pagination={\"page\":1,\"pageSize\":100}&filters={\"solutionType\":[\"OVA\"],\"deploymentPlatforms\":[\"ONPREM\"]}", nil)
 	if err != nil {
 		return pl, err
 	}
